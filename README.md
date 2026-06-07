@@ -59,10 +59,10 @@ When you run it, you'll see something like:
 
 ```
 Detected Edge profiles:
-  1 — Aarush (Default)
-  2 — Shruti (Profile 3)
-  3 — Aarush alt (Profile 8)
-  4 — notx (Profile 9)
+  1 — John (Default)
+  2 — Doe (Profile 3)
+  3 — Will (Profile 8)
+  4 — Smith (Profile 9)
 
 Enter profile number:
 ```
@@ -94,7 +94,7 @@ Repeat for each profile you want to use. After that, every run is fully automati
 
 ```bash
 cd bing-rewards-bot
-python rewards.py
+rewards script.py
 ```
 
 You'll be prompted to:
