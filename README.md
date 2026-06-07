@@ -31,7 +31,7 @@ Automates daily Bing searches on Microsoft Rewards across multiple Edge profiles
 ### 1. Clone the repo
 
 ```bash
-git clone https://github.com/yourusername/bing-rewards-bot.git
+git clone https://github.com/Aarush-Arora/bing-rewards-bot.git
 cd bing-rewards-bot
 ```
 
@@ -40,14 +40,6 @@ cd bing-rewards-bot
 ```bash
 pip install -r requirements.txt
 ```
-
-### 3. Download Edge WebDriver
-
-- Open Edge and go to `edge://settings/help` — note your Edge version (e.g. `124.0.2478.97`)
-- Download the matching WebDriver from [Microsoft's site](https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/)
-- Extract it and either:
-  - Place `msedgedriver.exe` in the same folder as the script, **or**
-  - Add it to your system PATH
 
 ---
 
@@ -113,8 +105,9 @@ Then just leave it — use your PC normally while it runs in the background.
 
 ## Notes
 
-- Gold members get **60 points/day** from searches (30 searches × 2pts)
-- Non-gold members typically cap at **30 points/day** (30 searches × 1pt)
+- Gold members get **60 points/day** from searches (20 searches × 3pts)
+- Silver members cap at **30 points/day** (10 searches × 3pts)
+- Basic members cap at **15 points/day** (5 searches × 3pts)
 - Searches are randomized every run so the pattern never looks the same
 - Delays between searches are randomized to look human
 - If Microsoft flags unusual activity, increase the delay values in the script (`random.uniform(10, 16)`)
