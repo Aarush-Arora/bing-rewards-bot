@@ -86,7 +86,7 @@ Repeat for each profile you want to use. After that, every run is fully automati
 
 ```bash
 cd bing-rewards-bot
-rewards script.py
+rewards_script.py
 ```
 
 You'll be prompted to:
