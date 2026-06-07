@@ -1,4 +1,6 @@
 from selenium import webdriver
+from selenium.webdriver.edge.service import Service
+from webdriver_manager.microsoft import EdgeChromiumDriverManager
 from selenium.webdriver.edge.options import Options
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
@@ -156,7 +158,8 @@ options.add_argument(f"--profile-directory={selected['folder']}")
 options.add_argument("--no-first-run")
 options.add_argument("--no-default-browser-check")
 
-driver = webdriver.Edge(options=options)
+service = Service(EdgeChromiumDriverManager().install())
+driver = webdriver.Edge(service=service, options=options)
 
 # ---- first time login check ----
 marker_path = os.path.join(BOT_DATA_DIR, selected['folder'], "setup_done.txt")
