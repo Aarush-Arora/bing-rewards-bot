@@ -125,9 +125,23 @@ def get_edge_profiles(user_data_dir):
                 try:
                     with open(prefs_path, 'r', encoding='utf-8') as f:
                         prefs = json.load(f)
-                    name = prefs.get("profile", {}).get("name", folder)
+
+                    name = None
+                    account_info = prefs.get("account_info", [])
+                    if account_info:
+                        first_name = account_info[0].get("edge_account_first_name", "")
+                        email = account_info[0].get("email", "")
+                        if first_name:
+                            name = first_name
+                        elif email:
+                            name = email.split("@")[0]
+
+                    if not name:
+                        name = prefs.get("profile", {}).get("name", folder)
+
                 except Exception:
                     name = folder
+
                 profiles.append({"name": name, "folder": folder})
 
     return profiles
