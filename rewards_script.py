@@ -236,7 +236,7 @@ for i, query in enumerate(searches):
 
     time.sleep(random.uniform(10, 16))
 
-    driver.execute_script("window.open('edge://newtab');")
+    driver.execute_script("window.open('about:blank');")
     time.sleep(3)
     driver.switch_to.window(driver.window_handles[0])
     driver.close()
